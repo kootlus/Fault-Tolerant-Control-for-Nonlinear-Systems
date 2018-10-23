@@ -1,0 +1,62 @@
+
+figure (1)
+plot(t,Fault,t,detected_fault,'LineWidth',2)
+legend('fault','detected fault')
+
+figure(2)
+subplot(3,1,1)
+plot(t,dA,'LineWidth',2)
+legend('Aileron with FTC ')
+xlabel('time (sec)')
+ylabel('deflection (degree)')
+
+subplot(3,1,2)
+plot(t,dE)
+legend('Elevator with FTC ')
+xlabel('time (sec)')
+ylabel('deflection (degree)')
+
+subplot(3,1,3)
+plot(t,dR,'LineWidth',2)
+legend('Rudder with FTC')
+xlabel('time (sec)')
+ylabel('deflection (degree)')
+
+figure(3)
+subplot(3,1,1)
+plot(t,dA_1,'LineWidth',2)
+legend('Aileron without FTC')
+xlabel('time (sec)')
+ylabel('deflection (degree)')
+
+subplot(3,1,2)
+plot(t,dE_1,'LineWidth',2)
+legend('Elevator without FTC')
+xlabel('time (sec)')
+ylabel('deflection (degree)')
+
+subplot(3,1,3)
+plot(t,dR_1)
+legend('Rudder without FTC')
+xlabel('time (sec)')
+ylabel('deflection (degree)')
+
+
+figure(4)
+subplot(3,1,1)
+plot(t,Beta,t,Beta_1, t,Beta_c,'LineWidth',2)
+legend('\beta with FTC','\beta without FTC','\beta_c')
+xlabel('time (sec)')
+ylabel('degree')
+
+subplot(3,1,2)
+plot(t,Alpha,t,Alpha_1,t,Alpha_c,'LineWidth',2)
+legend('\alpha with FTC','\alpha  without FTC','\alpha_c')
+xlabel('time (sec)')
+ylabel('degree')
+
+subplot(3,1,3)
+plot(t,Mio,t,Mio_1,t,Mio_c,'LineWidth',2)
+legend('\mu with FTC','\mu without FTC ','\mu_c')
+xlabel('time (sec)')
+ylabel('degree')
